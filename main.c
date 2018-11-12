@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 12:53:52 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/10 20:54:33 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/12 19:03:49 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,60 @@ int		main()
 {
 //	char	dest[8] = "afsdfgh";
 //	char	dest2[8] = "afsdfgh";
-//	char	*s1 = "ca ve ca va";
-//	char	*s2 = NULL;
+	char	*s1 = "ca ve, ca va";
+	char	*s2 = "ca va, ca va";
 //	int		c = 'f';
 //	char	const *src = "bien4l";
-//	size_t	i = 6;
-	int		c = ',';
+	size_t	i = 6;
+//	int		c = ',';
 //	const char	*str = " 		2147483649";
+//	char str[50];
+//	char str2[50];
+//	int		c = ':';
+//	const char src[50] = "http://www.tutorialspoint.com";
+//	char dest[50];
+//	char dest2[50];
+
+	//memcmp
+	printf("real = %d\n", memcmp(s1,s2,i));
+	printf("moi = %d\n", ft_memcmp(s1, s2, i));
+	//memchr
+	/*printf("real = %s\n", memchr(s1, c, i));
+	printf("moi = %s", ft_memchr(s1, c, i));*/
+
+	//ft_memccpy
+	/*strcpy(dest,"Hel:oooo!!");
+	strcpy(dest2, "Hel:oooo!!");
+	printf("Before ft_memcpy dest = %s\n", dest);
+	printf("Before memcpy dest = %s\n", dest2);
+	printf("real return = %s\n", memccpy(dest2, src, c, 6));
+	printf("moi return = %s\n", ft_memccpy(dest, src, c, 6));
+	printf("After ft_memcpy dest = %s\n", dest);
+	printf("After memcpy dest = %s\n", dest2);*/
+
+	//ft_memmove
+	/*char dest[] = "oldstring";
+	char dest2[] = "oldstring";
+	const char src[]  = "newstring";
+
+	printf("Before memmove dest = %s, src = %s\n", dest, src);
+	memmove(dest, src, 2);
+	ft_memmove(dest2, src, 2);
+	printf("real = %s\n", dest);
+	printf("moi = %s", dest2);*/
+
+	//strcpy(str2, "this is string.h library function");
+	//strcpy(str, "this is string.h library function");
+
+	//memset(str2, '#', 50);
+	//bzero(str2, 7);
+	//ft_memset(str, '#', 50);
+	//ft_bzero(str, 7);
+
+	//ft_putstr("moi : ");
+	//puts(str);
+	//ft_putstr("real : ");
+	//puts(str2);
 
 	//printf("ft_moi = %s\n", ft_strcpy(dest, src));
 	//printf("real ft = %s\n", strcpy(dest2, src));
@@ -54,7 +101,8 @@ int		main()
 	//printf("moi = %d\n", ft_atoi(str));
 	//printf("real = %d", atoi (str));
 
-	printf("moi = %d\n", ft_tolower(c));
-	printf("real = %d\n", tolower(c));
+	//printf("moi = %d\n", ft_tolower(c));
+	//printf("real = %d\n", tolower(c));
+	
 	return (0);
 }
