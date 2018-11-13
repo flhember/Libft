@@ -6,17 +6,25 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 16:44:21 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/10 17:46:54 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/13 15:59:36 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	size_t	i;
+	size_t	size;
+
+	i = 0;
+	size = ft_strlen(s);
+	while (i <= size)
 	{
 		if (*s == (char)c)
 			return ((char*)s);
 		s++;
+		i++;
 	}
 	return (0);
 }

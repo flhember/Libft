@@ -6,7 +6,7 @@
 #    By: flhember <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 18:09:39 by flhember          #+#    #+#              #
-#    Updated: 2018/11/12 19:31:58 by flhember         ###   ########.fr        #
+#    Updated: 2018/11/13 20:10:45 by flhember         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,13 @@ SRC = ft_strlen.c 	\
 	  ft_memmove.c	\
 	  ft_memchr.c	\
 	  ft_memcmp.c	\
+	  ft_memalloc.c	\
+	  ft_memdel.c	\
+	  ft_strnew.c	\
+	  ft_strdel.c	\
+	  ft_strclr.c	\
+	  ft_striter.c	\
+	  ft_striteri.c	\
 
 OBJ = $(SRC:.c=.o)
 

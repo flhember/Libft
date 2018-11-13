@@ -6,11 +6,11 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 20:42:22 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/10 20:58:02 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/13 16:24:18 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(char c)
+int		ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

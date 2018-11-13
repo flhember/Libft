@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 12:53:52 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/12 19:03:49 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/13 19:54:03 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 
 int		main()
 {
-//	char	dest[8] = "afsdfgh";
-//	char	dest2[8] = "afsdfgh";
-	char	*s1 = "ca ve, ca va";
-	char	*s2 = "ca va, ca va";
-//	int		c = 'f';
-//	char	const *src = "bien4l";
-	size_t	i = 6;
+//	char	dest[12] = "salut ca va";
+//	char	dest2[12] = "salut ca va";
+//	char	*s1 = "gded";
+//	char	*s2 = "\0dede";
+//	int		c = ':';
+//	const char *src = "ca va";
+//	size_t	i = 4;
 //	int		c = ',';
 //	const char	*str = " 		2147483649";
 //	char str[50];
@@ -33,8 +33,8 @@ int		main()
 //	char dest2[50];
 
 	//memcmp
-	printf("real = %d\n", memcmp(s1,s2,i));
-	printf("moi = %d\n", ft_memcmp(s1, s2, i));
+	//printf("real = %d\n", memcmp(s1,s2,i));
+	//printf("moi = %d\n", ft_memcmp(s1, s2, i));
 	//memchr
 	/*printf("real = %s\n", memchr(s1, c, i));
 	printf("moi = %s", ft_memchr(s1, c, i));*/
@@ -84,16 +84,19 @@ int		main()
 	//ft_putstr("\n real = ");
 	//ft_putstr(strncat(dest2, src, i));
 
+	//ft_strlcat
 	//printf("moi = %lu\n", ft_strlcat(dest, src, i));
 	//printf("real = %lu", strlcat(dest2, src, i));
 
+	//ft_strchr
 	//ft_putstr("moi = ");
 	//ft_putstr(ft_strrchr(dest, c));
 	//ft_putstr("\nft_real = ");
 	//ft_putstr(strrchr(dest2, c));
 
-	//printf("moi = %s\n", ft_strnstr(s1, s2, i));
-	//printf("real = %s\n", strnstr(s1, s2, i));
+	//ft_strstr, strnstr
+	//printf("moi = %s\n", ft_strstr(s1, s2));
+	//printf("real = %s\n", strstr(s1, s2));
 	
 	//printf("moi = %d\n", ft_strncmp(s1, s2, i));
 	//printf("real = %d\n", strncmp(s1, s2, i));
