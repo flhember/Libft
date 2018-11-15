@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/10 15:30:37 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/15 16:08:52 by flhember         ###   ########.fr       */
+/*   Created: 2018/11/15 15:51:54 by flhember          #+#    #+#             */
+/*   Updated: 2018/11/15 16:11:46 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t	sizedst;
+	size_t	i;
 
-	sizedst = ft_strlen(dst);
-	if (size <= sizedst)
-		return (ft_strlen(src) + size);
-	else
-	{
-		ft_strncat(dst, src, size - sizedst - 1);
-		return (ft_strlen(src) + sizedst);
-	}
+	i = 0;
+	if (!s1 || !s2)
+		return (0);
+	if (s1[0] == '\0' && s2[0] == '\0')
+		return (1);
+	while (s1[i] == s2[i] && i < n && s1[i] != '\0' && s2 != '\0')
+		i++;
+	if (i == n)
+		return (1);
+	return (0);
 }

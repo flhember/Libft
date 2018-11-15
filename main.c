@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 12:53:52 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/13 19:54:03 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/15 17:13:46 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ int		main()
 //	const char src[50] = "http://www.tutorialspoint.com";
 //	char dest[50];
 //	char dest2[50];
+	char	*s = "    salut   ";
 
+	ft_strtrim(s);
 	//memcmp
 	//printf("real = %d\n", memcmp(s1,s2,i));
 	//printf("moi = %d\n", ft_memcmp(s1, s2, i));

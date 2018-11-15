@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/10 15:30:37 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/15 16:08:52 by flhember         ###   ########.fr       */
+/*   Created: 2018/11/15 18:41:36 by flhember          #+#    #+#             */
+/*   Updated: 2018/11/15 18:44:08 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_putendl(char const *s)
 {
-	size_t	sizedst;
-
-	sizedst = ft_strlen(dst);
-	if (size <= sizedst)
-		return (ft_strlen(src) + size);
-	else
+	if (s)
 	{
-		ft_strncat(dst, src, size - sizedst - 1);
-		return (ft_strlen(src) + sizedst);
+		ft_putstr(s);
+		ft_putchar('\n');
 	}
 }

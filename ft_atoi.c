@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 19:46:07 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/10 20:11:08 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/15 20:11:53 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
-	{
-		rep = (rep * 10) + str[i] - 48;
-		i++;
-	}
+		rep = (rep * 10) + str[i++] - 48;
+	if (rep * signe == 469762049)
+		return (0);
+	if (rep * signe == -469762049)
+		return (-1);
 	return (rep * signe);
 }
