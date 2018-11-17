@@ -6,9 +6,11 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 17:49:06 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/13 18:01:05 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/16 19:26:44 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strstr(const char *s1, const char *s2)
 {

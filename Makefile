@@ -6,7 +6,7 @@
 #    By: flhember <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 18:09:39 by flhember          #+#    #+#              #
-#    Updated: 2018/11/15 19:50:11 by flhember         ###   ########.fr        #
+#    Updated: 2018/11/17 20:26:20 by flhember         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,16 @@ SRC = ft_strlen.c 	  \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c  \
 	  ft_putendl_fd.c \
+	  ft_strsplit.c	  \
+	  ft_itoa.c		  \
+	  ft_lstnew.c	  \
+	  ft_lstdelone.c  \
+	  ft_lstdel.c	  \
+	  ft_lstadd.c	  \
+	  ft_lstiter.c    \
+	  ft_lstmap.c	  \
+	  ft_print_list.c 
+
 
 OBJ = $(SRC:.c=.o)
 
@@ -71,10 +81,12 @@ FLY = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLY) -c $(SRC) -I $(HEADER)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+
+%.o : %.c
+	gcc $(FLY) -c $< -o $@ -I $(HEADER)
 
 main:
 	gcc $(FLY) $(SRC) main.c

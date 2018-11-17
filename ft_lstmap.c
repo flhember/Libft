@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 14:13:47 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/16 19:24:36 by flhember         ###   ########.fr       */
+/*   Created: 2018/11/17 18:28:53 by flhember          #+#    #+#             */
+/*   Updated: 2018/11/17 19:43:50 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*cpy;
-	size_t	i;
+	t_list	*begin;
+	t_list	*cpy;
 
-	i = 0;
-	cpy = s;
-	while (i < n)
+	begin = f(lst);
+	cpy = begin;
+	while (lst)
 	{
-		cpy[i] = '\0';
-		i++;
+		lst = lst->next;
+		cpy->next = f(lst);
+		cpy = cpy->next;
 	}
+	return (begin);
 }

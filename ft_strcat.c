@@ -6,9 +6,11 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 14:37:41 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/10 15:15:27 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/16 19:25:55 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

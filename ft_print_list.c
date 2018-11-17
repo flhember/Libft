@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_print_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 14:13:47 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/16 19:24:36 by flhember         ###   ########.fr       */
+/*   Created: 2018/11/17 20:22:24 by flhember          #+#    #+#             */
+/*   Updated: 2018/11/17 20:33:45 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_print_list(t_list *list)
 {
-	char	*cpy;
-	size_t	i;
-
-	i = 0;
-	cpy = s;
-	while (i < n)
+	while (list)
 	{
-		cpy[i] = '\0';
-		i++;
+		ft_putstr(list->content);
+		ft_putchar(' ');
+		ft_putnbr(list->content_size);
+		ft_putchar('\t');
+		list = list->next;
 	}
 }

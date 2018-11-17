@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 14:13:47 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/16 19:24:36 by flhember         ###   ########.fr       */
+/*   Created: 2018/11/17 15:23:53 by flhember          #+#    #+#             */
+/*   Updated: 2018/11/17 20:40:42 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstnew(void	const *content, size_t content_size)
 {
-	char	*cpy;
-	size_t	i;
+	t_list	*new;
 
-	i = 0;
-	cpy = s;
-	while (i < n)
+	new = NULL;
+	if (!(new = (t_list*)malloc(sizeof(t_list))))
+		return (NULL);
+	if (!content)
 	{
-		cpy[i] = '\0';
-		i++;
+		new->content = NULL;
+		new->content_size = 0;
 	}
+	else
+	{
+		if (!(new->content = (void*)malloc(sizeof(void) * content_size)))
+			return (NULL);
+		ft_memcpy(new->content, content, content_size);
+		new->content_size = content_size;
+	}
+	new->next = NULL;
+	return (new);
 }
