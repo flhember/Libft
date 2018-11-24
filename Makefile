@@ -6,7 +6,7 @@
 #    By: flhember <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 18:09:39 by flhember          #+#    #+#              #
-#    Updated: 2018/11/23 16:17:31 by flhember         ###   ########.fr        #
+#    Updated: 2018/11/24 14:49:37 by flhember         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,3 +102,5 @@ fclean: clean
 	/bin/rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean
