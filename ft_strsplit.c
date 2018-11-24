@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 14:45:15 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/16 19:31:37 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/23 19:36:51 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ char			**ft_strsplit(char const *s, char c)
 	if (!c || !s)
 		return (NULL);
 	nbword = count_word(s, c);
-	if (nbword == 0)
-		return (NULL);
 	if (!(tabfinal = (char**)malloc(sizeof(char*) * nbword + 1)))
 		return (0);
 	tabfinal = remplissage(tabfinal, s, c);

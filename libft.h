@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 18:13:18 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/17 20:56:48 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/23 17:04:13 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 void				ft_putendl(char const *s);
+void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putchar_fd(char c, int fd);
@@ -82,5 +83,9 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_print_list(t_list *list);
+char				*ft_strjoinfree(char *s1, char *s2, int n);
+void				ft_swap(int *a, int *b);
+int					ft_str_is_lowercase(char *str);
+int					ft_str_is_uppercase(char *str);
 
 #endif

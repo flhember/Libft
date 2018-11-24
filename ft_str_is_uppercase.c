@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_list.c                                    :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 20:22:24 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/23 17:57:19 by flhember         ###   ########.fr       */
+/*   Created: 2018/11/23 16:10:30 by flhember          #+#    #+#             */
+/*   Updated: 2018/11/23 16:16:40 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_print_list(t_list *list)
+int		ft_str_is_uppercase(char *str)
 {
-	while (list)
+	int		i;
+
+	i = 0;
+	while (str[i])
 	{
-		ft_putchar('[');
-		ft_putstr((char*)(list->content));
-		ft_putchar(']');
-		ft_putstr(" size: ");
-		ft_putnbr((int)(list->content_size));
-		ft_putstr("  -->  ");
-		list = list->next;
+		if (str[i] < 'A' || str[i] > 'Z')
+			return (0);
+		i++;
 	}
-	ft_putstr("NULL");
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 16:51:14 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/16 19:30:48 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/23 15:48:02 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strtrim(char const *s)
 		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 			i++;
 		if (s[i] == '\0')
-			return ((char*)s + i);
+			return (ft_strdup(s + i));
 		while (s[size] == ' ' || s[size] == '\n' || s[size] == '\t')
 			size--;
 		sizefin = size - i + 1;
