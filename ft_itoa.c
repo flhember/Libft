@@ -6,11 +6,11 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:33:24 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/23 14:50:42 by flhember         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:59:19 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 static int		sizeint(int n)
 {

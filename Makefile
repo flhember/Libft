@@ -6,7 +6,7 @@
 #    By: flhember <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 18:09:39 by flhember          #+#    #+#              #
-#    Updated: 2018/11/24 14:49:37 by flhember         ###   ########.fr        #
+#    Updated: 2018/11/27 16:58:08 by flhember         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ SRC = ft_strlen.c 	  		\
 
 OBJ = $(SRC:.c=.o)
 
-HEADER = libft.h
+HEADER = includes/
 
 FLY = -Wall -Wextra -Werror
 
@@ -91,9 +91,6 @@ $(NAME): $(OBJ)
 
 %.o : %.c
 	gcc $(FLY) -c $< -o $@ -I $(HEADER)
-
-main:
-	gcc $(FLY) $(SRC) main.c
 
 clean:
 	/bin/rm -rf $(OBJ)
