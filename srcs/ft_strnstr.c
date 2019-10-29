@@ -6,11 +6,11 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 18:17:45 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/22 18:41:04 by flhember         ###   ########.fr       */
+/*   Updated: 2019/01/24 15:59:04 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {

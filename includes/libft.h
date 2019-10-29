@@ -6,16 +6,20 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 18:13:18 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/29 18:48:41 by flhember         ###   ########.fr       */
+/*   Updated: 2019/10/28 15:11:15 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 8
 
 # include <string.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
+# include "ft_printf.h"
 
 typedef struct		s_list
 {
@@ -87,5 +91,16 @@ char				*ft_strjoinfree(char *s1, char *s2, int n);
 void				ft_swap(int *a, int *b);
 int					ft_str_is_lowercase(char *str);
 int					ft_str_is_uppercase(char *str);
+int					ft_intlen(long long n);
+char				*ft_lltoa(long long n);
+char				*ft_strnewspace(size_t size);
+char				*ft_ultoa_base(unsigned long n, int base);
+char				*ft_ultoa_base_big(unsigned long n, int base);
+long double			ft_pow(long double a, long double b);
+char				*ft_str_rev(char *str);
+char				*ft_strnewnull(char *str, size_t size);
+char				*ft_clean_str(char *str);
+void				ft_free_tab_int(int ***tab, int size);
+int					get_next_line(const int fd, char **line);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:33:24 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/27 16:59:19 by flhember         ###   ########.fr       */
+/*   Updated: 2019/10/11 15:16:49 by flhember         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static	char	*remplissage(char *str, int n, int cpyneg, int size)
 {
 	while (size >= 0)
 	{
-		str[size] = (n % 10) + 48;
+		str[size] = (n % 10) + '0';
 		n = n / 10;
 		size--;
 	}

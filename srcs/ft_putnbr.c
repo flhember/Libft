@@ -6,11 +6,11 @@
 /*   By: flhember <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 18:44:44 by flhember          #+#    #+#             */
-/*   Updated: 2018/11/23 15:27:23 by flhember         ###   ########.fr       */
+/*   Updated: 2019/01/24 16:02:12 by brpinto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_putnbr(int n)
 {
